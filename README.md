@@ -1,0 +1,13 @@
+## DSN KEY SCRIPT
+
+The goal of this script is to be used to programmatically set a default rate limit to all project keys in a Sentry.io organization
+
+### How to use it
+Create an `.env` file with the following  variables:
+-  `AUTH_TOKEN` -> Token with `project:admin` and `org:admin` permissions
+- `ORG_SLUG`
+- `RATELIMIT_WINDOW` -> Time window which is used by rate limit (in seconds - e.g 1 day has 86400 seconds)
+- `RATELIMIT_COUNT`
+
+Install `requirements.txt`
+Run `main.py` file

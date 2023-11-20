@@ -17,8 +17,8 @@ def main():
                 keys = key_response.json()
                 payload = {
                     "rateLimit" : {
-                        "window" : "86400", # 86400 seconds in a day
-                        "count" : "1000"
+                        "window" : os.environ["RATELIMIT_WINDOW"], # 86400 seconds in a day
+                        "count" : os.environ["RATELIMIT_COUNT"]
                     }
                 }
                 for key in keys:
